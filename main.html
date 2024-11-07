@@ -1,80 +1,135 @@
 <!DOCTYPE html>
-<html lang=“en”>
+
+<html>
+
 <head>
-<meta charset=“UTF-8”>
-<meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-<title>Problem Statement: Alignment</title>
+	<link rel="stylesheet" href="styles.css">
+	  <style>
+    body {
+      text-align: center;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+      width: 80%;
+    }
+    .middle {
+      border: 1px solid black;
+      border-spacing: 1px;
+      padding: 1px;
+    }
+    .center {
+      text-align: center;
+    }
+    .right {
+      text-align: right;
+    }
+    .green {
+      background-color: green;
+    }
+    .blue {
+      background-color: blue;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
+
 <body>
-<h2>Alignment</h2>
-<p>Create a webpage that describes the use of HTML tables. Follow the specific requirements provided below:</p>
-<h3>General Requirements</h3>
-<ol>
-<li>Webpage Title: “HTML Assignment 3”</li>
-<li>Webpage Heading: Center-aligned “HTML Assignment #3”</li>
-<li>All tables should have the class “middle”</li>
-</ol>
-<h3>Table 1</h3>
-<table border=“1”>
-<tr><td>Structure</td><td>3 rows, 3 columns</td></tr>
-<tr><td>Classes</td><td>Middle row and rightmost column: “center” and “right”</td></tr>
-<tr><td>IDs</td><td>Table: “table-1”; Cells: “t11”, “t12”, “t13”</td></tr>
-</table>
-<h3>Table 2</h3>
-<table border=“1”>
-<tr><td>Structure</td><td>6 rows, 6 columns, 1st row in a single cell</td></tr>
-<tr><td>IDs</td><td>Table: “table-2”; First Cell: “t21”</td></tr>
-<tr><td>Attributes</td><td>First cell should have a colspan of 6</td></tr>
-</table>
-<h3>Table 3</h3>
-<table border=“1”>
-<tr><td>Structure</td><td>Include an image; First and last rows: green and blue</td></tr>
-<tr><td>IDs</td><td>Table: “table-3”; Image Cell: “t-image”</td></tr>
-<tr><td>Image</td><td><a href=“https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2013_FallP3/Luthra Portfolio/images-1.jpeg”>Image URL</a></td></tr>
-</table>
-<h3>Styling</h3>
-<ul>
-<li>Table Borders: 1px solid black; Spacing: 1px; Cell Padding: 1px</li>
-<li>Background Colors: “green” and “blue” classes</li>
-</ul>
-<h3>Example</h3>
-<p>Here’s how your webpage should look:</p>
-<img src=“https://user-images.githubusercontent.com/78348500/217435540-555a8eb0-79a6-4590-90c0-28b620341d42.png” alt=“example” />
+	<!-- the entire body must be written by student -->
+	 <h1>HTML Assignment #3</h1>
 
-<!–
+  <!-- Table 1 -->
+  <table id="table-1" class="middle">
+    <tr>
+      <td id="t11">left</td>
+      <td class="center" id="t12">center</td>
+      <td class="right" id="t13">right</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td class="center">center</td>
+      <td class="right">right</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td class="center">center</td>
+      <td class="right">right</td>
+    </tr>
+  </table>
 
-These are the cypress testcases on which the student’s code will be checked upon.
-const baseUrl = “http://localhost:3000”;
-const mainUrl = baseUrl + “/main.html”;
-describe(“Test cases for tables, attributes, images, and styling”, () => {
-beforeEach(() => {
-cy.visit(mainUrl);
-});
-// Check for tables
-[‘table-1’, ‘table-2’, ‘table-3’].forEach((tableId) => {
-it(contains ${tableId}, () => {
-cy.get(#${tableId}).should(‘be.visible’).should(‘have.class’, ‘middle’);
-});
-});
-it(‘classes of elements check’, () => {
-cy.get(‘#t12’).should(‘have.class’, ‘center’);
-cy.get(‘#t13’).should(‘have.class’, ‘right’);
-});
-// Check for attributes
-it(‘check for colspan’, () => {
-cy.get(‘#t21’).should(‘have.attr’, ‘colspan’, ‘6’);
-});
-// Check for images
-it(‘check for image’, () => {
-cy.get(‘#t-image img’).should(‘exist’);
-});
-// Check for styling
-it(‘check for styles of table 1’, () => {
-cy.get(‘td’)
-.should(‘have.css’, ‘padding’, ‘1px’)
-.should(‘have.css’, ‘border’, ‘1px solid rgb(0, 0, 0)’);
-});
-});
-–>
+  <!-- Table 2 -->
+  <table id="table-2" class="middle">
+    <tr>
+      <td id="t21" colspan="6"> </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <!-- Table 3 -->
+  <table id="table-3" class="middle">
+    <tr class="green">
+      <td colspan="3"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td id="t-image">
+        <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2013_FallP3/Luthra%20Portfolio/images-1.jpeg" alt="Basketball dunk">
+      </td>
+      <td></td>
+    </tr>
+    <tr class="blue">
+      <td colspan="3"></td>
+    </tr>
+  </table>
+
+    <script type="text/javascript" src="./script.js">
+</script>
+
 </body>
+
 </html>
